@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.aziztech.testpay"
-        minSdk 24
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -37,5 +37,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation 'com.github.chargily:chargily-epay-java:1.1.1'
+    implementation ('com.github.chargily:chargily-epay-java:1.1.1') { exclude group: "org.aspectj" }
+
 }
